@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class Terning {
 
-private int øjne; // Opretter variablen �jne af typen int
+private int øjne; // Opretter variablen øjne af typen int
 private int sider; // Opretter variablen sider af typen int
 
 	public Terning(int sider) {
-		this.sider = sider; // denne klasses v�rdi = variablen v�rdi
+		this.sider = sider; // denne klasses værdi = variablen værdi
 	}
 		
 	public void kast() {
