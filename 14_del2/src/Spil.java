@@ -5,37 +5,44 @@ import desktop_resources.GUI;
 
 public class Spil {
 
-	private static Spiller[] spillere = new Spiller[2];
+	private Spiller[] spillere = new Spiller[2];
 	private boolean spilvundet = false;
 	private boolean spiltabt = false;
-	private static Raflebæger raflebæger = new Raflebæger(6);
-	private static Regler regler = new Regler();
-	private static String valgtsprog = "";
-	private static Field [] felter = new Field[12];
-	private static 	String[] spiltekst = new String[10];//Der gøres plads til 10 spilbeskeder.
-	private static Spil thegame = new Spil();
-	private static String[] spillerbesked = new String[12];
+	private Raflebæger raflebæger = new Raflebæger(6);
+	private Regler regler = new Regler();
+	private String valgtsprog = "";
+	private Field [] felter = new Field[12];
+	private String[] spiltekst = new String[10];//Der gøres plads til 10 spilbeskeder.
+	private Spil thegame = new Spil();
+	private String[] spillerbesked = new String[12];
 	
 	public static void main (String[] args) throws IOException{
-		// Lav et spil objekt at spille med
-		initialiserSpil();
+		new Spil().spil();
 		
-		//Alternering mellem spillere og konsekvens hvis vundet eller tabt
-		while (thegame.spilvundet != true && thegame.spiltabt != true) {
-			for (int spillernr = 0 ; spillernr <= 1 ; spillernr=spillernr+1) {
-				thegame.sekvens(spillere[spillernr], spiltekst);
-				//Check for om spil er vundet eller tabt og generer beskeder til spilleren.
-				if (thegame.spilvundet == true) {
-					System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].konto.hentV�rdi() + " " + spiltekst[6] );
-					break;
+	}
+
+
+	private void spil() {
+		// Lav et spil objekt at spille med
+				initialiserSpil();
+				
+				//Alternering mellem spillere og konsekvens hvis vundet eller tabt
+				while (thegame.spilvundet != true && thegame.spiltabt != true) {
+					for (int spillernr = 0 ; spillernr <= 1 ; spillernr=spillernr+1) {
+						thegame.sekvens(spillere[spillernr], spiltekst);
+						//Check for om spil er vundet eller tabt og generer beskeder til spilleren.
+						if (thegame.spilvundet == true) {
+							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].hentKonto().hentVærdi() + " " + spiltekst[6] );
+							break;
+						}
+						if (thegame.spiltabt == true) {
+							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[2]);
+							break;
+						}
+					}
 				}
-				if (thegame.spiltabt == true) {
-					System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[2]);
-					break;
-				}
-			}
-		}
-		GUI.close();
+				GUI.close();
+		
 	}
 
 
@@ -60,28 +67,28 @@ public class Spil {
 			regler.felt(raflebæger.hentSum());//s�t reglen i regler
 
 			//Hvis spiller før under 0 med aktuelt felts point
-			if (spiller.konto.checkMinus(regler.hentPoint())){
+			if (spiller.hentKonto().checkMinus(regler.hentPoint())){
 				this.spiltabt = true;
 				GUI.close();
 				break;
 			}
 
 			//Hvis der ikke er noget problem kan man lige så godt søtte guldet ind på kontoen
-			String resultat = spiller.konto.indsæt(regler.hentPoint()); //tilføj point til spiller konto
-			GUI.setBalance(spiller.hentNavn(), spiller.konto.hentVærdi()); //set spillebræt balance
+			String resultat = spiller.hentKonto().indsæt(regler.hentPoint()); //tilføj point til spiller konto
+			GUI.setBalance(spiller.hentNavn(), spiller.hentKonto().hentVærdi()); //set spillebræt balance
 
 			//Hvis spiller har over 3000 guld
-			if (spiller.konto.hentVærdi() > 3000) {
+			if (spiller.hentKonto().hentVærdi() > 3000) {
 				this.spilvundet = true;
 				GUI.close();
 				break;
 			}	
 
 		}
-		while (regler.hentEkstraTur()==true);//S�l�nge ekstratur er sat til true
+		while (regler.hentEkstraTur()==true);//Sålænge ekstratur er sat til true
 	}
 	
-	private static void initialiserSpil() throws IOException{
+	private void initialiserSpil() throws IOException{
 		//Lav menu og hent sprog
 		Menu menu = new Menu();// Lav et menuobjekt 
 		valgtsprog = menu.lavMenu();//brug menuobjekt til at vælge sprog og returnere en sprogstreng
@@ -103,7 +110,7 @@ public class Spil {
 
 		//Opret spilleplade med spillere og startbeløb.
 		GUI.create(felter); //Lav spillebræt og felter
-		GUI.addPlayer(spillere[0].hentNavn(), spillere[0].konto.hentV�rdi());//Opret spillere med navn og guld
-		GUI.addPlayer(spillere[1].hentNavn(), spillere[0].konto.hentV�rdi());//Opret spillere med navn og guld
+		GUI.addPlayer(spillere[0].hentNavn(), spillere[0].hentKonto().hentVærdi());//Opret spillere med navn og guld
+		GUI.addPlayer(spillere[1].hentNavn(), spillere[0].hentKonto().hentVærdi());//Opret spillere med navn og guld
 	}
 }
