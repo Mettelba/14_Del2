@@ -22,7 +22,7 @@ public class Sprog{
 
 	public void skiftfelter() throws IOException{
 		
-		//Indlæs tekst fra valgt sprogfil i felter i GUI.
+		//Indlï¿½s tekst fra valgt sprogfil i felter i GUI.
 		String linje1 = "";
 		String linje2 = "";
 		String linje3 = "";
@@ -30,18 +30,18 @@ public class Sprog{
 			this.filstinavn = "resourcer/"+ this.valgtsprog + ".txt";
 			System.out.println(this.filstinavn);
 		} catch (Exception e) {
-			System.out.println(e + "  Der er problemer med at læse filen");
+			System.out.println(e + "  Der er problemer med at lï¿½se filen");
 		}
 		InputStream resourceAsStream = Sprog.class.getResourceAsStream(this.filstinavn);
 		BufferedReader ind = new BufferedReader(new InputStreamReader(resourceAsStream));
 		for (int x=0;x<=11;x=x+1) { // der er 12 felter startende fra 0 i objektet fields[]
 
-			linje1 = læsLinje(ind);//Læs linje 1
+			linje1 = lÃ¦sLinje(ind);//Lï¿½s linje 1
 			if (linje1 != null) { // Hvis det ikke er en tom linje	
-				linje2 = læsLinje(ind); //Læs linje2 
-				linje3 = læsLinje(ind); //Læs linje3
+				linje2 = lÃ¦sLinje(ind); //Lï¿½s linje2 
+				linje3 = lÃ¦sLinje(ind); //Lï¿½s linje3
 
-				//Indsæt de 3 indlæste linjer i objektet.
+				//Indsï¿½t de 3 indlï¿½ste linjer i objektet.
 				this.fieldsoversat[x] = new Street.Builder()
 						.setTitle(linje1)
 						.setBgColor(Color.green)
@@ -56,9 +56,9 @@ public class Sprog{
 			}	
 		}
 		
-		//Indlæs spiltekst
-		for (int x=0;x<=9;x=x+1) {//Indlæs spiltekst
-			linje1 = læsLinje(ind);//Læs linje 1
+		//Indlï¿½s spiltekst
+		for (int x=0;x<=9;x=x+1) {//Indlï¿½s spiltekst
+			linje1 = lÃ¦sLinje(ind);//Lï¿½s linje 1
 			if (linje1 != null) { // Hvis det ikke er en tom linje	
 				this.spiltekst[x] = linje1;
 			}else {
@@ -67,19 +67,19 @@ public class Sprog{
 		}
 	}
 
-	private static String læsLinje(BufferedReader ind) throws IOException {//Hjælpe methode der læser en linje og springer over ved //
+	private static String lÃ¦sLinje(BufferedReader ind) throws IOException {//Hjï¿½lpe methode der lï¿½ser en linje og springer over ved //
 		String linje = "";
 		{
 			try {
 				do {
-					linje = ind.readLine(); //Læs linje2 
+					linje = ind.readLine(); //Lï¿½s linje2 
 					if (linje == null) {
 						return linje;
 					}
 				}
-				while (linje.charAt(0) == '/' && linje.charAt(1) == '/'); // hvis der står // i starten af linjen så hent næste linje			
+				while (linje.charAt(0) == '/' && linje.charAt(1) == '/'); // hvis der stï¿½r // i starten af linjen sï¿½ hent nï¿½ste linje			
 			} catch (Exception e) {
-				System.out.println("Der er problemer med at indlæse en linje fra Sprogfilen " + e);
+				System.out.println("Der er problemer med at indlï¿½se en linje fra Sprogfilen " + e);
 			}
 		}
 
@@ -95,7 +95,7 @@ public class Sprog{
 	}
 
 
-	public void sætFieldsOversat(Field[] fieldsoversat) {
+	public void sÃ¦tFieldsOversat(Field[] fieldsoversat) {
 		this.fieldsoversat = fieldsoversat;
 	}
 	

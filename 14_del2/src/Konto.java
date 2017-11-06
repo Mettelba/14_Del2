@@ -1,50 +1,50 @@
 
 public class Konto {
 
-	private int værdi;
-	private String[] spiltekst = new Spiltekst[10]
+	private int vÃ¦rdi;
+	private String[] spiltekst = new Spiltekst[10];
 	
 	public Konto () {
-		this.værdi=1000; //Kravspecifikation
+		this.vÃ¦rdi=1000; //Kravspecifikation
 		
 	}
 
-	public int hentVærdi() {
-		return værdi;
+	public int hentVÃ¦rdi() {
+		return vÃ¦rdi;
 	}
 
-	public void sætVærdi(int værdi) {
-		this.værdi = værdi;
+	public void sÃ¦tVÃ¦rdi(int vÃ¦rdi) {
+		this.vÃ¦rdi = vÃ¦rdi;
 	}
 
-	public String indsæt(int værdi) {	//NU! ligger ansvaret for om konto kan gå i 0 i Kontoklassen. Dette kode vil aldrig blive udført da vi 
-									//koder spilsekvensen således at vi checker checkMinus inden vi indsætter og derfor laver en konsekvens 
-									//hvis kontoen < 0 inden spilsekvensen kan indsætte guld på kontoen. Men uden dette kode ligger ansvaret
+	public String indsÃ¦t(int vÃ¦rdi) {	//NU! ligger ansvaret for om konto kan gï¿½ i 0 i Kontoklassen. Dette kode vil aldrig blive udfï¿½rt da vi 
+									//koder spilsekvensen sï¿½ledes at vi checker checkMinus inden vi indsï¿½tter og derfor laver en konsekvens 
+									//hvis kontoen < 0 inden spilsekvensen kan indsï¿½tte guld pï¿½ kontoen. Men uden dette kode ligger ansvaret
 									//ikke hos Konto som vi har bestemt, men hos spilsekvensen.
 		
-		if (this.værdi + værdi < 0) {//Hvis værdien af det der står på kontoen - det der bliver lagt til (-) < 0
-			this.værdi = 0;
+		if (this.vÃ¦rdi + vÃ¦rdi < 0) {//Hvis vï¿½rdien af det der stï¿½r pï¿½ kontoen - det der bliver lagt til (-) < 0
+			this.vÃ¦rdi = 0;
 			return (spiltekst[9]);
 		}else {
-			this.værdi = this.værdi + værdi;
+			this.vÃ¦rdi = this.vÃ¦rdi + vÃ¦rdi;
 			return (spiltekst[10]);
 		}
 	}
 	
-	public String hæv(int værdi) {
-		if (this.værdi + værdi < 0){
-			this.værdi = 0;
+	public String hÃ¦v(int vÃ¦rdi) {
+		if (this.vÃ¦rdi + vÃ¦rdi < 0){
+			this.vÃ¦rdi = 0;
 			return (spiltekst[9]);
 		}else {
-			this.værdi = this.værdi + værdi;
+			this.vÃ¦rdi = this.vÃ¦rdi + vÃ¦rdi;
 			return (spiltekst[10]);
 		}
 	}
 	
 	
-	public boolean checkMinus(int værdi) {
-		if (this.værdi + værdi < 0) {//Hvis værdien af det der står på kontoen - det der bliver lagt til (-) < 0
-			this.værdi = 0;//sæt værdi = 0
+	public boolean checkMinus(int vÃ¦rdi) {
+		if (this.vÃ¦rdi + vÃ¦rdi < 0) {//Hvis vï¿½rdien af det der stï¿½r pï¿½ kontoen - det der bliver lagt til (-) < 0
+			this.vÃ¦rdi = 0;//sï¿½t vï¿½rdi = 0
 			return true;//returnerer true hvis condition er opfyldt.
 		}
 		return false;//returnerer false hvis condition ikke er opfyldt.
