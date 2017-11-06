@@ -19,7 +19,6 @@ public class Spil {
 		Spil game = new Spil();
 		game.spil();
 	}
-
  
 	private void spil() throws IOException {
 				
@@ -29,13 +28,14 @@ public class Spil {
 				while (spilvundet != true && spiltabt != true) {
 					for (int spillernr = 0 ; spillernr <= 1 ; spillernr=spillernr+1) {
 						sekvens(spillere[spillernr], spiltekst);
+						
 						//Check for om spil er vundet eller tabt og generer beskeder til spilleren.
 						if (spilvundet == true) {
-							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].hentKonto().hentVærdi() + " " + spiltekst[6] );
+							GUI.showMessage(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].hentKonto().hentVærdi() + " " + spiltekst[6] );
 							break;
 						}
 						if (spiltabt == true) {
-							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[2]);
+							GUI.showMessage(spillere[spillernr].hentNavn() + ". " + spiltekst[2]);
 							break;
 						}
 					}
@@ -44,31 +44,31 @@ public class Spil {
 		
 	}
 
-
 	public void sekvens(Spiller spiller, String[] spiltekst) { //spiller objekt og spiltekst array
 		for (int x=0;x<=11;x= x + 1) {
 			System.out.println(spillerbesked[x]);
 		}
+		
+		
 		
 		do {
 			//Spiller interaktion
 			GUI.getUserButtonPressed(spiltekst[4] + " " + spiller.hentNavn() + ". "+ spiltekst[5], spiltekst[7]);
 			GUI.removeAllCars(spiller.hentNavn());
 
-			//Ryst bøger og sæt terninger og bil i GUI
-			raflebæger.ryst();//Ryst bøgeret
+			//Ryst bæger og sæt terninger og bil i GUI
+			raflebæger.ryst();//Ryst bægeret
 			GUI.setDice(raflebæger.hentTerning1værdi(),raflebæger.hentTerning2værdi());//sæt terninger på spillebræt
-			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet
-			System.out.println(spillerbesked[raflebæger.hentSum()-2]);
-			GUI.showMessage(spillerbesked[raflebæger.hentSum()-2]);
+			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet.
+//			System.out.println(spillerbesked[raflebæger.hentSum()-2]);DEBUG KODE PROBLEM MED NULL værdi.
+			GUI.showMessage(spillerbesked[raflebæger.hentSum()-2]);//skriver beskeder til GUI.
 
 			//Find den rigtige regel og konsekvens
-			regler.felt(raflebæger.hentSum());//s�t reglen i regler
+			regler.felt(raflebæger.hentSum());//sæt reglen i regler
 
-			//Hvis spiller før under 0 med aktuelt felts point
-			if (spiller.hentKonto().checkMinus(regler.hentPoint())){
+			//Hvis spiller får under 0 med aktuelt felts point
+			if (spiller.hentKonto().checkMinus(regler.hentPoint())==true){
 				this.spiltabt = true;
-				GUI.close();
 				break;
 			}
 
@@ -79,10 +79,8 @@ public class Spil {
 			//Hvis spiller har over 3000 guld
 			if (spiller.hentKonto().hentVærdi() > 3000) {
 				this.spilvundet = true;
-				GUI.close();
 				break;
 			}	
-
 		}
 		while (regler.hentEkstraTur()==true);//Sålænge ekstratur er sat til true
 	}
