@@ -41,7 +41,7 @@ public class Regler {
 
 	}
 
-	public void reglesæt (int terningslag) {  	//Her er reglerne for felterne som er givet i 
+	public void felt (int terningslag) {  	//Her er reglerne for felterne som er givet i 
 												// kravspecifikationen.
 
 		switch (terningslag) {

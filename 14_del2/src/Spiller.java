@@ -18,7 +18,7 @@ public class Spiller {
 		this.navn = navn;
 	}
 
-	public Konto getKonto() {
+	public Konto hentKonto() {
 		return konto;
 	}
 }
