@@ -32,7 +32,10 @@ public class testRaflebæger {
 
 	@Test
 	public void testRaflebæger() {
-		fail("Not yet implemented");
+		raflebæger.sætSum(5);
+		int expected = 5;
+		int actual = raflebæger.hentSum();
+		assertEquals("objektet raflebæger blev ikke oprettet rigtigt", expected, actual);
 	}
 
 	@Test
@@ -41,7 +44,6 @@ public class testRaflebæger {
 		for(int n=1; n<600000; n=n+1) {
 			raflebæger.ryst();
 			int sum = raflebæger.hentTerning1værdi();
-//			int sum1 = raflebæger.hentTerning2værdi();
 			statistik[sum] = statistik[sum]+1;
 		}
 		for(int x=1; x<=6; x=x+1) {
@@ -52,7 +54,6 @@ public class testRaflebæger {
 		int[] statistik1 = new int[7];
 		for(int n=1; n<600000; n=n+1) {
 			raflebæger.ryst();
-//			int sum = raflebæger.hentTerning1værdi();
 			int sum1 = raflebæger.hentTerning2værdi();
 			statistik1[sum1] = statistik1[sum1]+1;
 		}
@@ -64,32 +65,53 @@ public class testRaflebæger {
 
 	@Test
 	public void testHentTerning1værdi() {
-		fail("Not yet implemented");
+		raflebæger.sætTerning1værdi(8);;
+		int expected = 8;
+		int actual = raflebæger.hentTerning1værdi();
+		assertEquals("metoden hentTerning virker ikke", expected, actual);
 	}
 
 	@Test
 	public void testHentTerning2værdi() {
-		fail("Not yet implemented");
+		raflebæger.sætTerning2værdi(3);
+		int expected = 3;
+		int actual = raflebæger.hentTerning2værdi();
+		assertEquals("metoden hentTerning2værdi virker ikke", expected, actual);
 	}
 
 	@Test
 	public void testHentSum() {
-		fail("Not yet implemented");
+		raflebæger.sætSum(8);
+		int expected = 8;
+		int actual = raflebæger.hentSum();
+		assertEquals("metoden hentTerning virker ikke", expected, actual);
 	}
 
 	@Test
 	public void testSætSum() {
-		fail("Not yet implemented");
+		raflebæger.ryst();
+		System.out.println("raflebægeret er rystet har fået sum: " + raflebæger.hentSum());
+		raflebæger.sætSum(10);
+		int expected = 10;
+		int actual = raflebæger.hentSum();
+		assertEquals("sætSum virker ikke efter hensigten", expected, actual);
 	}
 
 	@Test
 	public void testHentAntalSider() {
-		fail("Not yet implemented");
+		raflebæger.sætAntalsider(12);
+		int expected = 12;
+		int actual = raflebæger.hentAntalSider();
+		assertEquals("HentAntalSider-metoden virker ikke", expected, actual);
 	}
 
 	@Test
 	public void testSætAntalsider() {
-		fail("Not yet implemented");
+		//System.out.println("Antal sider på terningerne er: " + raflebæger.hentAntalSider());
+		raflebæger.sætAntalsider(20);
+		int expected = 20;
+		int actual = raflebæger.hentAntalSider();
+		assertEquals("sætAntalsider virker ikke", expected, actual);
 	}
 
 }
