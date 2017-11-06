@@ -14,12 +14,12 @@ public class Menu {
 	public Menu () { //Constructor.
 	}
 
-	public String lavMenu()throws IOException{//Throws IOException er kr�vet for at man kan h�ndtere fejl ved l�sning af fil.
+	public String lavMenu()throws IOException{//Throws IOException er krævet for at man kan håndtere fejl ved løsning af fil.
 
 		String linje = "";
 
 		try {
-			int antal = Integer.parseInt(sprog.readLine());//Den f�rste linje er antal sprog i menuen
+			int antal = Integer.parseInt(sprog.readLine());//Den første linje er antal sprog i menuen
 			String[] menu = new String[antal];//Array der bliver dimensioneret med antal
 
 			//Skriv menuen til konsollen
@@ -33,7 +33,7 @@ public class Menu {
 			}// loop
 
 			System.out.println("V�lg: "); 
-			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at v�lge menu valg indtil der er indtastet et nummer p� menuen
+			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at vælge menu valg indtil der er indtastet et nummer på menuen
 				menuvalg = sc.nextInt(); //modtag menuvalg
 			}
 
