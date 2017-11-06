@@ -12,7 +12,7 @@ import game.Raflebæger;
 
 public class testRaflebæger {
 	
-	Raflebæger raflebæger = new Raflebæger();
+	Raflebæger raflebæger = new Raflebæger(6);
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -45,8 +45,21 @@ public class testRaflebæger {
 			statistik[sum] = statistik[sum]+1;
 		}
 		for(int x=1; x<=6; x=x+1) {
-			System.out.println(x+"ere = " + statistik[x]);
+			System.out.println("terning1 " + x+"ere = " + statistik[x]);
 		}
+		
+		
+		int[] statistik1 = new int[7];
+		for(int n=1; n<600000; n=n+1) {
+			raflebæger.ryst();
+//			int sum = raflebæger.hentTerning1værdi();
+			int sum1 = raflebæger.hentTerning2værdi();
+			statistik1[sum1] = statistik1[sum1]+1;
+		}
+		for(int x=1; x<=6; x=x+1) {
+			System.out.println("terning2 " + x+"ere = " + statistik1[x]);
+		}
+		
 	}
 
 	@Test
