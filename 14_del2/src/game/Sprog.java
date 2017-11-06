@@ -52,8 +52,7 @@ public class Sprog{
 				System.out.println(linje2);
 				spillerbesked[x] = spillerbesked[x] + linje2;
 				spillerbesked[x] = spillerbesked[x] + '\n';
-				spillerbesked[x] = spillerbesked[x] + linje3;
-				
+				spillerbesked[x] = spillerbesked[x] + linje3;	
 			}	
 		}
 		
