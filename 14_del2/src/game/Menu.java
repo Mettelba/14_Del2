@@ -36,7 +36,6 @@ public class Menu {
 			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at vælge menu valg indtil der er indtastet et nummer på menuen
 				menuvalg = sc.nextInt(); //modtag menuvalg
 			}
-
 			lukobjekter();
 			return menu[menuvalg-1]; //returner det valgte sprog.
 
