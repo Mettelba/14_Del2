@@ -1,3 +1,4 @@
+package game;
 
 import java.io.*;
 import java.util.Scanner;
@@ -13,17 +14,17 @@ public class Menu {
 	public Menu () { //Constructor.
 	}
 
-	public String lavMenu()throws IOException{//Throws IOException er krævet for at man kan håndtere fejl ved læsning af fil.
+	public String lavMenu()throws IOException{//Throws IOException er krï¿½vet for at man kan hï¿½ndtere fejl ved lï¿½sning af fil.
 
 		String linje = "";
 
 		try {
-			int antal = Integer.parseInt(sprog.readLine());//Den første linje er antal sprog i menuen
+			int antal = Integer.parseInt(sprog.readLine());//Den fï¿½rste linje er antal sprog i menuen
 			String[] menu = new String[antal];//Array der bliver dimensioneret med antal
 
 			//Skriv menuen til konsollen
 			for (int x=0;x<=antal-1;x=x+1) { //loop fra 0 til antal sprog i menu
-				linje = sprog.readLine(); //Læs linje i menuen til variablen linje.
+				linje = sprog.readLine(); //Lï¿½s linje i menuen til variablen linje.
 				if (linje == null){//Efter sidste sprog i menuen
 					break; //break ud af loop
 				}
@@ -31,8 +32,8 @@ public class Menu {
 				menu[x]=linje; //lig sproglinjen over i array
 			}// loop
 
-			System.out.println("Vælg: "); 
-			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at vælge menu valg indtil der er indtastet et nummer på menuen
+			System.out.println("Vï¿½lg: "); 
+			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at vï¿½lge menu valg indtil der er indtastet et nummer pï¿½ menuen
 				menuvalg = sc.nextInt(); //modtag menuvalg
 			}
 

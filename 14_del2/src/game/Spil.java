@@ -1,3 +1,4 @@
+package game;
 import java.io.IOException;
 import java.util.Scanner;
 import desktop_fields.Field;
@@ -58,7 +59,7 @@ public class Spil {
 
 			//Ryst bøger og sæt terninger og bil i GUI
 			raflebæger.ryst();//Ryst bøgeret
-			GUI.setDice(raflebæger.hentGemteØjne(0),raflebøger.hentGemteØjne(1));//sæt terninger på spillebræt
+			GUI.setDice(raflebæger.hentGemteØjne(0),raflebæger.hentGemteØjne(1));//sæt terninger på spillebræt
 			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet
 			System.out.println(spillerbesked[raflebæger.hentSum()-2]);
 			GUI.showMessage(spillerbesked[raflebæger.hentSum()-2]);
