@@ -2,7 +2,7 @@
 public class Spiller {
 	
 	private String navn = " ";
-	private Konto konto;
+	public Konto konto;
 	
 	public Spiller(String navn) {
 		
