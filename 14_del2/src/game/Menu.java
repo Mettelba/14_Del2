@@ -2,7 +2,7 @@ package game;
 
 import java.io.*;
 import java.util.Scanner;
-
+ 
 public class Menu {
 	private InputStream is = getClass().getResourceAsStream(SPROGMENU_TXT);
 	private InputStreamReader isr = new InputStreamReader(is);

@@ -20,7 +20,7 @@ public class Spil {
 		game.spil();
 	}
 
-
+ 
 	private void spil() throws IOException {
 				
 				initialiserSpil();
