@@ -41,7 +41,7 @@ public class Sprog{
 				linje2 = læsLinje(ind); //L�s linje2 
 				linje3 = læsLinje(ind); //L�s linje3
 
-				//Inds�t de 3 indl�ste linjer i objektet.
+				//Indsæt de 3 indl�ste linjer i objektet.
 				this.fieldsoversat[x] = new Street.Builder()
 						.setTitle(linje1)
 						.setBgColor(Color.green)
@@ -56,9 +56,9 @@ public class Sprog{
 			}	
 		}
 		
-		//Indl�s spiltekst
-		for (int x=0;x<=9;x=x+1) {//Indl�s spiltekst
-			linje1 = læsLinje(ind);//L�s linje 1
+		//Indløs spiltekst
+		for (int x=0;x<=9;x=x+1) {//Indløs spiltekst
+			linje1 = læsLinje(ind);//Læs linje 1
 			if (linje1 != null) { // Hvis det ikke er en tom linje	
 				this.spiltekst[x] = linje1;
 			}else {
@@ -67,7 +67,7 @@ public class Sprog{
 		}
 	}
 
-	private static String læsLinje(BufferedReader ind) throws IOException {//Hj�lpe methode der l�ser en linje og springer over ved //
+	private static String læsLinje(BufferedReader ind) throws IOException {//Hjælpe methode der løser en linje og springer over ved //
 		String linje = "";
 		{
 			try {
@@ -77,7 +77,7 @@ public class Sprog{
 						return linje;
 					}
 				}
-				while (linje.charAt(0) == '/' && linje.charAt(1) == '/'); // hvis der st�r // i starten af linjen s� hent n�ste linje			
+				while (linje.charAt(0) == '/' && linje.charAt(1) == '/'); // hvis der står // i starten af linjen så hent næste linje			
 			} catch (Exception e) {
 				System.out.println("Der er problemer med at indl�se en linje fra Sprogfilen " + e);
 			}
