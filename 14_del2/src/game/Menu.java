@@ -32,7 +32,7 @@ public class Menu {
 				menu[x]=linje; //lig sproglinjen over i array
 			}// loop
 
-			System.out.println("V�lg: "); 
+			System.out.println("Vælg: "); 
 			while (menuvalg < 1 || menuvalg > antal) { //bliv ved med at vælge menu valg indtil der er indtastet et nummer på menuen
 				menuvalg = sc.nextInt(); //modtag menuvalg
 			}
