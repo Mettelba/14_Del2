@@ -1,6 +1,5 @@
 package game;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
 import desktop_fields.Field;
 import desktop_resources.GUI;
 
@@ -14,29 +13,28 @@ public class Spil {
 	private String valgtsprog = "";
 	private Field [] felter = new Field[12];
 	private String[] spiltekst = new String[10];//Der gøres plads til 10 spilbeskeder.
-	private Spil thegame = new Spil();
 	private String[] spillerbesked = new String[12];
 	
 	public static void main (String[] args) throws IOException{
-		new Spil().spil();
-		
+		Spil game = new Spil();
+		game.spil();
 	}
 
-
-	private void spil()throws IOException {
-		// Lav et spil objekt at spille med
+ 
+	private void spil() throws IOException {
+				
 				initialiserSpil();
 				
 				//Alternering mellem spillere og konsekvens hvis vundet eller tabt
-				while (thegame.spilvundet != true && thegame.spiltabt != true) {
+				while (spilvundet != true && spiltabt != true) {
 					for (int spillernr = 0 ; spillernr <= 1 ; spillernr=spillernr+1) {
-						thegame.sekvens(spillere[spillernr], spiltekst);
+						sekvens(spillere[spillernr], spiltekst);
 						//Check for om spil er vundet eller tabt og generer beskeder til spilleren.
-						if (thegame.spilvundet == true) {
+						if (spilvundet == true) {
 							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].hentKonto().hentVærdi() + " " + spiltekst[6] );
 							break;
 						}
-						if (thegame.spiltabt == true) {
+						if (spiltabt == true) {
 							System.out.println(spillere[spillernr].hentNavn() + ". " + spiltekst[2]);
 							break;
 						}
@@ -96,8 +94,8 @@ public class Spil {
 
 		//Skift til nyt sprog på baggrund af valgt menupunkt.
 		//Lav et skiftsprog objekt med
-		//det valgte sprog s� vi kan skifte
-		//sprog p� felterne
+		//det valgte sprog så vi kan skifte
+		//sprog på felterne
 		Sprog skiftsprog = new Sprog(valgtsprog);	
 		
 		skiftsprog.skiftfelter(); //skift sprog p� felterne
