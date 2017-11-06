@@ -59,7 +59,7 @@ public class Spil {
 
 			//Ryst bøger og sæt terninger og bil i GUI
 			raflebæger.ryst();//Ryst bøgeret
-			GUI.setDice(raflebæger.hentGemteØjne(0),raflebæger.hentGemteØjne(1));//sæt terninger på spillebræt
+			GUI.setDice(raflebæger.hentTerning1Værdi,raflebæger.hentTerning2Værdi);//sæt terninger på spillebræt
 			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet
 			System.out.println(spillerbesked[raflebæger.hentSum()-2]);
 			GUI.showMessage(spillerbesked[raflebæger.hentSum()-2]);
