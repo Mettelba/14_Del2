@@ -1,0 +1,73 @@
+//Denne fil skal have følgende format.
+//Field title. eks.  Tårn +250 gold   eller  Nothing hvis der ikke skal stå noget
+//Field Description. eks    Du har landet på tårnet og får. 
+//Field Subtext. eks   250 gold stort tillykke. 
+//Sidste tekstlinje i filen skal slutte med et linjeskift
+//
+//Field 0
+Nothing
+DETTE Field KAN IKKE BRUGES
+DETTE Field KAN IKKE BRUGES
+//Field 1
+Tower +250 gold
+Fantastic you have landed in the tower and you get
+250 gold congratulations.
+//Field 2
+Crater -100 gold
+Unfortunately you have driven in the Crater, and your car has broken. It is going to cost you
+100 gold to get the car fixed
+//Field 3
+Palace Gates +100 gold
+WOW. You have reach the Palace Gates and you get
+100 gold. Nice going dude.
+//Field 4
+The Cold Desert -20 gold
+Brrrrrr. It is Fricking cold, and you have to burn one of your expensive books to keep warm. It is going to cost
+20 gold to buy again.
+//Field 5
+The Walled City +100 gold.
+Oh man you are cool. You have succeded climbing the highest city walls, and have gotten
+100 gold.
+//Field 6
+The Monastary 0 gold
+Phew and huuuummmmmmmmmmmmmmm. You can relax a bit, and escape from the never ending moneyrace...
+0 gold
+//Field 7
+The Black Cave -70 gold.
+It is scary and very dark. You have to use your entire stash of lighter fluids just to see and keep warm. It has cost you
+70 gold
+//Field 8
+Huts in the mountains +60 gold.
+You are visiting your grandma in the mountains, and she gives you
+60 gold.
+//Field 9
+The Werewall(Werewolf-wall) -80 gold.
+BE CAREFUL! Werewolfs are everywhere. You have had to hire rangers to help you over the dangerous wall. You get an extra throw because of the ekstra help but it is expensive
+80 gold.
+//Field 10
+The Pit -80 gold.
+You have fallen into a deep abyss, and you have to pay a passerby for his help.. What a greedy motherfucker.
+80 gold
+//Field 11
+The Goldmine 650 gold
+JACKPOT!!!!! How lucky can one man be? You practically stumbled over a goldmine Du nærmest faldt over en goldmine with LOTS of gold. You have earned
+650 gold.
+//Andre spilbeskeder startende med spillernavne
+Player 1
+Player 2
+//Konto < 0 og tabt spillet
+You have exceed your credit on the account, and have lost the game.
+//Konto > 3000 og vundet spillet
+You have won the game with
+//Hej
+Hey
+//Tryk på knappen
+Press the button to throw the dice.
+//Guld
+gold
+//Knaptekst
+Roll the dice
+//Overførslen er gået godt
+The transfer has completed allright
+//Overførslen sætter konto i minus
+The transfer would set your account to negative, and the account is therefore set to 0
