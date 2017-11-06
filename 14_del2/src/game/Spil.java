@@ -41,7 +41,7 @@ public class Spil {
 					}
 				}
 				GUI.close();
-		
+		 
 	}
 
 	public void sekvens(Spiller spiller, String[] spiltekst) { //spiller objekt og spiltekst array
