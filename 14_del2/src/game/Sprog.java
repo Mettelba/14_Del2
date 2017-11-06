@@ -14,7 +14,7 @@ public class Sprog{
 	private Field[] fieldsoversat = new Field[12];
 	private	String valgtsprog = "";
 	private String filstinavn = "";
-	private String[] spiltekst = new String[10];
+	private String[] spiltekst = new String[11];
 	private String[] spillerbesked = new String[12];
 
 	public Sprog (String valgtsprog) {
@@ -28,7 +28,7 @@ public class Sprog{
 		String linje2 = "";
 		String linje3 = "";
 		try {
-			this.filstinavn = "resourcer/"+ this.valgtsprog + ".txt";
+			this.filstinavn = "/resourcer/"+ this.valgtsprog + ".txt";
 			System.out.println(this.filstinavn);
 		} catch (Exception e) {
 			System.out.println(e + "  Der er problemer med at l�se filen");
