@@ -2,23 +2,23 @@ import java.util.Random;
 
 public class Terning {
 
-private int øjne; // Opretter variablen øjne af typen int
+private int Ã¸jne; // Opretter variablen ï¿½jne af typen int
 private int sider; // Opretter variablen sider af typen int
 
 	public Terning(int sider) {
-		this.sider = sider; // denne klasses værdi = variablen værdi
+		this.sider = sider; // denne klasses vï¿½rdi = variablen vï¿½rdi
 	}
 		
 	public void kast() {
 		Random tal = new Random();
-		this.øjne = tal.nextInt(this.sider)+1;
+		this.Ã¸jne = tal.nextInt(this.sider)+1;
 	}
 
-	public int hentØjne() {
-		return øjne;
+	public int hentÃ˜jne() {
+		return Ã¸jne;
 	}
 	
-	public void sætØjne (int øjne) {
-		this.øjne = øjne;
+	public void sÃ¦tÃ˜jne (int Ã¸jne) {
+		this.Ã¸jne = Ã¸jne;
 	}
 }
