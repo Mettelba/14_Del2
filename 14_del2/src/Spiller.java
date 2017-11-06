@@ -2,14 +2,12 @@
 public class Spiller {
 	
 	private String navn = " ";
-	public Konto konto;
+	private Konto konto;
 	
 	public Spiller(String navn) {
 		
 		this.sætNavn(navn);
 		this.konto = new Konto();
-		
-		
 	}
 
 	public String hentNavn() {
@@ -19,8 +17,8 @@ public class Spiller {
 	public void sætNavn(String navn) {
 		this.navn = navn;
 	}
-	
-	
-	
 
+	public Konto getKonto() {
+		return konto;
+	}
 }

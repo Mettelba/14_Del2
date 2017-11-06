@@ -67,7 +67,7 @@ public class Spil {
 			}
 
 			//Hvis der ikke er noget problem kan man lige så godt søtte guldet ind på kontoen
-			String resultat = spiller.konto.indsøt(regler.hentPoint()); //tilføj point til spiller konto
+			String resultat = spiller.konto.indsæt(regler.hentPoint()); //tilføj point til spiller konto
 			GUI.setBalance(spiller.hentNavn(), spiller.konto.hentVærdi()); //set spillebræt balance
 
 			//Hvis spiller har over 3000 guld
