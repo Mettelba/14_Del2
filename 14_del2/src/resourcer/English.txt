@@ -1,6 +1,6 @@
-//Denne fil skal have følgende format.
-//Field title. eks.  Tårn +250 gold   eller  Nothing hvis der ikke skal stå noget
-//Field Description. eks    Du har landet på tårnet og får. 
+//Denne fil skal have fï¿½lgende format.
+//Field title. eks.  Tï¿½rn +250 gold   eller  Nothing hvis der ikke skal stï¿½ noget
+//Field Description. eks    Du har landet pï¿½ tï¿½rnet og fï¿½r. 
 //Field Subtext. eks   250 gold stort tillykke. 
 //Sidste tekstlinje i filen skal slutte med et linjeskift
 //
@@ -25,9 +25,9 @@ The Cold Desert -20 gold
 Brrrrrr. It is Fricking cold, and you have to burn one of your expensive books to keep warm. It is going to cost
 20 gold to buy again.
 //Field 5
-The Walled City +100 gold.
+The Walled City +180 gold.
 Oh man you are cool. You have succeded climbing the highest city walls, and have gotten
-100 gold.
+180 gold.
 //Field 6
 The Monastary 0 gold
 Phew and huuuummmmmmmmmmmmmmm. You can relax a bit, and escape from the never ending moneyrace...
@@ -45,12 +45,12 @@ The Werewall(Werewolf-wall) -80 gold.
 BE CAREFUL! Werewolfs are everywhere. You have had to hire rangers to help you over the dangerous wall. You get an extra throw because of the ekstra help but it is expensive
 80 gold.
 //Field 10
-The Pit -80 gold.
+The Pit -50 gold.
 You have fallen into a deep abyss, and you have to pay a passerby for his help.. What a greedy motherfucker.
-80 gold
+50 gold
 //Field 11
 The Goldmine 650 gold
-JACKPOT!!!!! How lucky can one man be? You practically stumbled over a goldmine Du nærmest faldt over en goldmine with LOTS of gold. You have earned
+JACKPOT!!!!! How lucky can one man be? You practically stumbled over a goldmine Du nï¿½rmest faldt over en goldmine with LOTS of gold. You have earned
 650 gold.
 //Andre spilbeskeder startende med spillernavne
 Player 1
@@ -61,13 +61,13 @@ You have exceed your credit on the account, and have lost the game.
 You have won the game with
 //Hej
 Hey
-//Tryk på knappen
+//Tryk pï¿½ knappen
 Press the button to throw the dice.
 //Guld
 gold
 //Knaptekst
 Roll the dice
-//Overførslen er gået godt
+//Overfï¿½rslen er gï¿½et godt
 The transfer has completed allright
-//Overførslen sætter konto i minus
+//Overfï¿½rslen sï¿½tter konto i minus
 The transfer would set your account to negative, and the account is therefore set to 0

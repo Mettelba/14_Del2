@@ -7,27 +7,22 @@ public class Regler {
 
 	
 	public Regler() {
-
 		this.ekstratur = false;
 
 	}
 
 	public int hentPoint() {
-
 		return this.point;
 
 	}
 
 
 	public void sætpoint(int point){
-
 		this.point = point;
 
 	}
 
 	public boolean hentEkstraTur() {
-
-		
 		return this.ekstratur;
 		
 
@@ -35,20 +30,16 @@ public class Regler {
 	}
 
 	public void sætEkstraTur(boolean ekstratur) {
-
-
 		this.ekstratur = ekstratur;
 		
 
 	}
 
 	public void felt (int terningslag) {  	//Her er reglerne for felterne som er givet i 
-												// kravspecifikationen.
-
+											// kravspecifikationen.
 		switch (terningslag) {
 
 		case 2:
-
 			this.point = 250;
 			this.ekstratur = false;
 			break;
@@ -102,10 +93,6 @@ public class Regler {
 			this.point = 650;
 			this.ekstratur = false;
 			break;
-
-			
-
 		}
-
 	}
 }

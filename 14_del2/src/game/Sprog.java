@@ -27,6 +27,7 @@ public class Sprog{
 		String linje1 = "";
 		String linje2 = "";
 		String linje3 = "";
+	
 		try {
 			this.filstinavn = "/resourcer/"+ this.valgtsprog + ".txt";
 			System.out.println(this.filstinavn);

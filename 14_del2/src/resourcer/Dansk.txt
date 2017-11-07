@@ -25,9 +25,9 @@ Den kolde ørken -20 guld
 Brrrrrr. Det er skide koldt og du må brånde en af dine dyre bøger for at holde varmen. Det koster
 20 guld at købe igen.
 //Felt 5
-Byen med de høje mure +100 guld.
+Byen med de høje mure +180 guld.
 Du er godt nok sej. Du har formået at bestige de højeste bymure, og har fået
-100 guld.
+180 guld.
 //Felt 6
 Klosteret 0 guld
 Phew, puha og huuuummmmmmmmmmmmmmm. Du kan slappe lidt af fra det evindelige pengeræs...
@@ -45,9 +45,9 @@ Varulve væggen (VarVæggen) -80 guld.
 PAS På! Der er varulve overalt. Du har måttet hyre spejdere til at hjælpe dig ved den farlig væg. Du får et ekstra kast pga. af alt hjælpen men det har kostet dig 
 80 guld.
 //Felt 10
-Hullet -80 guld.
+Hullet -50 guld.
 Du er faldet i et kæmpe dybt hul, og du må betale en forbipasserende for hjælpen.. Sådan en grådig rad.
-80 guld
+50 guld
 //Felt 11
 Guldminen 650 guld
 JACKPOT!!!!! Hvor heldig har man lov at være. Du nærmest faldt over en guldmine med MASSER af guld. Du har tjent
