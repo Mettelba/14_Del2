@@ -71,5 +71,12 @@ public class KontoTest {
 		assertEquals(expected, actual);
 		
 	}
+	
+	@Test
+	public void testtoString() {
+		System.out.println(konto.toString());
+		
+	}
+	
 
 }

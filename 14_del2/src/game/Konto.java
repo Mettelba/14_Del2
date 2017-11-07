@@ -54,4 +54,20 @@ public class Konto {
 		return false;//returnerer false hvis condition ikke er opfyldt.
 
 	}
+	public String toString() {
+		String returstreng;
+		int værdi;
+		String[] spiltekst2 = new String[11];
+		
+		værdi=this.værdi;
+		spiltekst2 = this.spiltekst;
+		
+		returstreng= "værdi = "+værdi;
+		for(int x=0;x<=10;x=x+1) {
+			returstreng=returstreng + "\n";
+			returstreng = returstreng + "spiltekst["+x+"]= " + spiltekst2[x];
+		}
+		
+		return returstreng;
+	}
 }
