@@ -17,7 +17,7 @@ public class Spil {
 	
 	public static void main (String[] args) throws IOException{
 		Spil game = new Spil();
-		game.spil();// spil spil
+		game.spil();// spil
 	}
  
 	private void spil() throws IOException {

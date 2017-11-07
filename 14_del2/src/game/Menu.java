@@ -4,12 +4,12 @@ import java.io.*;
 import java.util.Scanner;
  
 public class Menu {
+	private final String SPROGMENU_TXT = "/resourcer/sprogmenu.txt";
 	private InputStream is = getClass().getResourceAsStream(SPROGMENU_TXT);
 	private InputStreamReader isr = new InputStreamReader(is);
 	private BufferedReader sprog = new BufferedReader(isr);
 	private Scanner sc = new Scanner (System.in);
 	private int menuvalg = 0;
-	private static final String SPROGMENU_TXT = "resourcer/sprogmenu.txt";
 
 	public Menu () { //Constructor.
 	}

@@ -3,7 +3,7 @@ package game;
 public class Konto {
 
 	private int værdi;
-	private String[] spiltekst = new String[10];
+	private String[] spiltekst = new String[11];
 	
 	public Konto () {
 		this.værdi=1000; //Kravspecifikation
