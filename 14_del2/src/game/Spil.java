@@ -56,7 +56,6 @@ public class Spil {
 
 			GUI.setDice(raflebæger.hentTerning1værdi(),3,3,raflebæger.hentTerning2værdi(),4,4);//sæt terninger på spillebræt
 			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet.
-			//			System.out.println(spillerbesked[raflebæger.hentSum()-2]);//DEBUG KODE PROBLEM MED NULL værdi.
 			GUI.showMessage(spillerbesked[raflebæger.hentSum()-1]);//skriver beskeder til GUI.
 
 			//Find den rigtige regel og konsekvens

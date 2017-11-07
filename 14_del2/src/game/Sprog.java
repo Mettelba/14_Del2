@@ -23,7 +23,7 @@ public class Sprog{
 
 	public void skiftfelter() throws IOException{
 		
-		//Indl�s tekst fra valgt sprogfil i felter i GUI.
+		//Indlæs tekst fra valgt sprogfil i felter i GUI.
 		String linje1 = "";
 		String linje2 = "";
 		String linje3 = "";
@@ -42,7 +42,7 @@ public class Sprog{
 				linje2 = læsLinje(ind); //Læs linje2 
 				linje3 = læsLinje(ind); //Læs linje3
 
-				//Indsæt de 3 indl�ste linjer i objektet.
+				//Indsæt de 3 indløste linjer i objektet.
 				this.fieldsoversat[x] = new Street.Builder()
 						.setTitle(linje1)
 						.setBgColor(Color.green)
@@ -56,8 +56,8 @@ public class Sprog{
 			}	
 		}
 		
-		//Indløs spiltekst
-		for (int x=0;x<=9;x=x+1) {//Indløs spiltekst
+		//Indlæs spiltekst
+		for (int x=0;x<=9;x=x+1) {//Indlæs spiltekst
 			linje1 = læsLinje(ind);//Læs linje 1
 			if (linje1 != null) { // Hvis det ikke er en tom linje	
 				this.spiltekst[x] = linje1;

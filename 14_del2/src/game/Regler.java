@@ -95,4 +95,16 @@ public class Regler {
 			break;
 		}
 	}
+	public String toString() {
+		String returstreng;
+		int værdi; 
+		boolean ekstratur;
+		
+		værdi = this.værdi;
+		ekstratur = this.ekstratur;
+		
+		returstreng ="værdi = " + værdi + "\n  ekstratur = "+ekstratur;
+			
+		return returstreng;
+	}
 }

@@ -31,7 +31,7 @@ public class Spiller {
 			String spiltekst = konto.indsæt(værdi);
 		}
 	}
-	
+
 	public boolean erDuBankerot() {
 		return this.bankerot;
 	}
@@ -43,10 +43,22 @@ public class Spiller {
 	public void sætKontoVærdi(int værdi) {
 		konto.sætVærdi(værdi);
 	}
-	
+
 	public void hævKontoVærdi(int værdi) {
 		konto.hæv(værdi);
 	}
-
-
+	public String toString() {
+		String returstreng;
+		String navn = " ";
+		Konto konto;
+		boolean bankerot = false;
+		
+		navn = this.navn;
+		konto = this.konto;
+		bankerot = this.bankerot;
+		
+		returstreng = "navn = " + navn + "\n   konto = " + konto + "\n   bankerot = "+ bankerot;
+		
+		return returstreng;
+	}
 }
