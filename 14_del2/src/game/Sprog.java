@@ -30,18 +30,17 @@ public class Sprog{
 	
 		try {
 			this.filstinavn = "/resourcer/"+ this.valgtsprog + ".txt";
-			System.out.println(this.filstinavn);
 		} catch (Exception e) {
-			System.out.println(e + "  Der er problemer med at l�se filen");
+			System.out.println(e + "  Der er problemer med at læse filen");
 		}
 		InputStream resourceAsStream = Sprog.class.getResourceAsStream(this.filstinavn);
 		BufferedReader ind = new BufferedReader(new InputStreamReader(resourceAsStream));
 		for (int x=0;x<=11;x=x+1) { // der er 12 felter startende fra 0 i objektet fields[]
 
-			linje1 = læsLinje(ind);//L�s linje 1
+			linje1 = læsLinje(ind);//Læs linje 1
 			if (linje1 != null) { // Hvis det ikke er en tom linje	
-				linje2 = læsLinje(ind); //L�s linje2 
-				linje3 = læsLinje(ind); //L�s linje3
+				linje2 = læsLinje(ind); //Læs linje2 
+				linje3 = læsLinje(ind); //Læs linje3
 
 				//Indsæt de 3 indl�ste linjer i objektet.
 				this.fieldsoversat[x] = new Street.Builder()
@@ -50,8 +49,8 @@ public class Sprog{
 						.setDescription(linje2)
 						.setSubText(linje3)
 						.build();
-				System.out.println(linje2);
 				spillerbesked[x] = spillerbesked[x] + linje2;
+				spillerbesked[x] = spillerbesked[x].replaceFirst("null", "");//Af en eller anden grund stod der null i starten af hver linje2. Det fjernes hermed
 				spillerbesked[x] = spillerbesked[x] + '\n';
 				spillerbesked[x] = spillerbesked[x] + linje3;	
 			}	

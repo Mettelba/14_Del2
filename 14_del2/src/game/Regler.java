@@ -2,7 +2,7 @@ package game;
 public class Regler {
 
 
-	private int point; 
+	private int værdi; 
 	private boolean ekstratur;
 
 	
@@ -12,13 +12,13 @@ public class Regler {
 	}
 
 	public int hentPoint() {
-		return this.point;
+		return this.værdi;
 
 	}
 
 
 	public void sætpoint(int point){
-		this.point = point;
+		this.værdi = point;
 
 	}
 
@@ -40,57 +40,57 @@ public class Regler {
 		switch (terningslag) {
 
 		case 2:
-			this.point = 250;
+			this.værdi = 250;
 			this.ekstratur = false;
 			break;
 
 		case 3:
-			this.point = -100;
+			this.værdi = -100;
 			this.ekstratur = false;
 			break;
 
 		case 4:
-			this.point = 100;
+			this.værdi = 100;
 			this.ekstratur = false;
 			break;
 
 		case 5:
-			this.point = -20;
+			this.værdi = -20;
 			this.ekstratur = false;
 			break;
 
 		case 6: 
-			this.point = 180;
+			this.værdi = 180;
 			this.ekstratur = false;
 			break;
 
 		case 7:
-			this.point = 0;
+			this.værdi = 0;
 			this.ekstratur = false;
 			break;
 
 		case 8: 
-			this.point = -70;
+			this.værdi = -70;
 			this.ekstratur = false;
 			break;
 
 		case 9:
-			this.point = 60;
+			this.værdi = 60;
 			this.ekstratur = false;
 			break;
 
 		case 10: 
-			this.point = -80;
+			this.værdi = -80;
 			this.ekstratur = true;
 			break;
 
 		case 11:
-			this.point = -50;
+			this.værdi = -50;
 			this.ekstratur = false;
 			break;
 
 		case 12:
-			this.point = 650;
+			this.værdi = 650;
 			this.ekstratur = false;
 			break;
 		}

@@ -44,16 +44,9 @@ public class Spil {
 			}
 		}
 		GUI.close();
-
 	}
 
 	public void sekvens(Spiller spiller, String[] spiltekst) { //spiller objekt og spiltekst array
-		for (int x=0;x<=11;x= x + 1) {
-			System.out.println(spillerbesked[x]);
-		}
-
-
-
 		do {
 			//Spiller interaktion
 			GUI.getUserButtonPressed(spiltekst[4] + " " + spiller.hentNavn() + ". "+ spiltekst[5], spiltekst[7]);
@@ -61,7 +54,8 @@ public class Spil {
 
 			//Ryst bæger og sæt terninger og bil i GUI
 			raflebæger.ryst();//Ryst bægeret
-			GUI.setDice(raflebæger.hentTerning1værdi(),raflebæger.hentTerning2værdi());//sæt terninger på spillebræt
+
+			GUI.setDice(raflebæger.hentTerning1værdi(),3,3,raflebæger.hentTerning2værdi(),4,4);//sæt terninger på spillebræt
 			GUI.setCar(raflebæger.hentSum(), spiller.hentNavn());//Sæt bilen på spillerbrættet.
 			//			System.out.println(spillerbesked[raflebæger.hentSum()-2]);//DEBUG KODE PROBLEM MED NULL værdi.
 			GUI.showMessage(spillerbesked[raflebæger.hentSum()-1]);//skriver beskeder til GUI.
