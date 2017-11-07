@@ -22,4 +22,19 @@ private int sider; // Opretter variablen sider af typen int
 	public void sætØjne (int øjne) {
 		this.øjne = øjne;
 	}
+	
+	public String toString() {
+		String returstreng;
+		int øjne;
+		int sider;
+		
+		øjne=this.øjne;
+		sider = this.sider;
+		
+		returstreng= "øjne = "+øjne;
+		returstreng= returstreng + "\n  sider = "+sider;
+		
+		return returstreng;
+		}
+		
 }
