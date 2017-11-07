@@ -58,7 +58,7 @@ public class testRaflebæger {
 			statistik1[sum1] = statistik1[sum1]+1;
 		}
 		for(int x=1; x<=6; x=x+1) {
-			System.out.println("terning2 " + x+"ere = " + statistik1[x]);
+			System.out.println("terning2 " + x+"ere = " + statistik1[x]); //
 		}
 		
 		int[] statistik2 = new int[13]; //
