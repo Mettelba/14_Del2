@@ -4,10 +4,10 @@ public class Konto {
 
 	private int værdi;
 	private String[] spiltekst = new String[11];
-	
-	public Konto () {
-		this.værdi=1000; //Kravspecifikation
-		
+
+	public Konto (int værdi) {
+		this.værdi = værdi; //Kravspecifikation
+
 	}
 
 	public int hentVærdi() {
@@ -19,33 +19,33 @@ public class Konto {
 	}
 
 	public String indsæt(int værdi) {	//NU! ligger ansvaret for om konto kan g� i 0 i Kontoklassen. Dette kode vil aldrig blive udf�rt da vi 
-									//koder spilsekvensen s�ledes at vi checker checkMinus inden vi inds�tter og derfor laver en konsekvens 
-									//hvis kontoen < 0 inden spilsekvensen kan inds�tte guld p� kontoen. Men uden dette kode ligger ansvaret
-									//ikke hos Konto som vi har bestemt, men hos spilsekvensen.
-		
+		//koder spilsekvensen s�ledes at vi checker checkMinus inden vi inds�tter og derfor laver en konsekvens 
+		//hvis kontoen < 0 inden spilsekvensen kan inds�tte guld p� kontoen. Men uden dette kode ligger ansvaret
+		//ikke hos Konto som vi har bestemt, men hos spilsekvensen.
+
 		if (this.værdi + værdi < 0) {//Hvis v�rdien af det der st�r p� kontoen - det der bliver lagt til (-) < 0
 			this.værdi = 0;
 			return (spiltekst[10]);
-		}else {
-			this.værdi = this.værdi + værdi;
-			return (spiltekst[9]);
 		}
+		this.værdi = this.værdi + værdi;
+		return (spiltekst[9]);
+
 	}
-	
+
 	public String hæv(int værdi) {//Man skal ikke kunne hæve et minus beløb modsat indsæt hvor man indsætter et minus beløb.??
 		if (værdi < 0) {
-			return (spiltekst[9]);
+			return (spiltekst[10]);
 		}
 		if (this.værdi - værdi < 0){
 			this.værdi = 0;
 			return (spiltekst[10]);
-		}else {
-			this.værdi = this.værdi - værdi;
-			return (spiltekst[9]);
 		}
+		this.værdi = this.værdi - værdi;
+		return (spiltekst[9]);
 	}
-	
-	
+
+
+
 	public boolean checkMinus(int værdi) {
 		if (this.værdi + værdi < 0) {//Hvis v�rdien af det der st�r p� kontoen - det der bliver lagt til (-) < 0
 			this.værdi = 0;//s�t v�rdi = 0

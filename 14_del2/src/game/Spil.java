@@ -34,7 +34,7 @@ public class Spil {
 
 				//Check for om spil er vundet eller tabt og generer beskeder til spilleren.
 				if (spilvundet == true) {
-					GUI.showMessage(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].hentKonto().hentVærdi() + " " + spiltekst[6] );
+					GUI.showMessage(spillere[spillernr].hentNavn() + ". " + spiltekst[3] + " " + spillere[spillernr].indeståendeSpillerKonto() + " " + spiltekst[6] );
 					break;
 				}
 				if (spiltabt == true) {
@@ -43,7 +43,6 @@ public class Spil {
 				}
 			}
 		}
-		GUI.close();
 	}
 
 	public void sekvens(Spiller spiller, String[] spiltekst) { //spiller objekt og spiltekst array
@@ -64,17 +63,15 @@ public class Spil {
 			regler.felt(raflebæger.hentSum());//sæt reglen i regler
 
 			//Hvis spiller får under 0 med aktuelt felts point
-			if (spiller.hentKonto().checkMinus(regler.hentVærdi())==true){
+			spiller.modtagGevinst(regler.hentVærdi());
+			if (spiller.erDuBankerot()==true){
 				this.spiltabt = true;
 				break;
 			}
 
-			//Hvis der ikke er noget problem kan man lige så godt søtte guldet ind på kontoen
-			String resultat = spiller.hentKonto().indsæt(regler.hentVærdi()); //tilføj point til spiller konto
-			GUI.setBalance(spiller.hentNavn(), spiller.hentKonto().hentVærdi()); //set spillebræt balance
-
+			GUI.setBalance(spiller.hentNavn(), spiller.indeståendeSpillerKonto()); //set spillebræt balance
 			//Hvis spiller har over 3000 guld
-			if (spiller.hentKonto().hentVærdi() > 3000) {
+			if (spiller.indeståendeSpillerKonto() > 3000) {
 				this.spilvundet = true;
 				break;
 			}	
@@ -91,6 +88,7 @@ public class Spil {
 		//Lav et skiftsprog objekt med
 		//det valgte sprog så vi kan skifte
 		//sprog på felterne
+		
 		Sprog skiftsprog = new Sprog(valgtsprog);	
 
 		skiftsprog.skiftfelter(); //skift sprog p� felterne
@@ -118,8 +116,8 @@ public class Spil {
 				.patternDotted()
 				.build();
 	
-		GUI.addPlayer(spillere[0].hentNavn(), spillere[0].hentKonto().hentVærdi(),car);//Opret spillere med navn og guld
-		GUI.addPlayer(spillere[1].hentNavn(), spillere[0].hentKonto().hentVærdi(),car2);//Opret spillere med navn og guld
+		GUI.addPlayer(spillere[0].hentNavn(), spillere[0].indeståendeSpillerKonto(),car);//Opret spillere med navn og guld
+		GUI.addPlayer(spillere[1].hentNavn(), spillere[0].indeståendeSpillerKonto(),car2);//Opret spillere med navn og guld
 		
 
 	}
