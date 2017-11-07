@@ -1,6 +1,6 @@
-//Denne fil skal have følgende format.
-//Felt title. eks.  Tårn +250 guld   eller  Nothing hvis der ikke skal stå noget
-//Felt Description. eks    Du har landet på tårnet og får. 
+//Denne fil skal have fÃ¸lgende format.
+//Felt title. eks.  TÃ¥rn +250 guld   eller  Nothing hvis der ikke skal stÃ¥ noget
+//Felt Description. eks    Du er landet pÃ¥ tÃ¥rnet og fÃ¥r. 
 //Felt Subtext. eks   250 guld stort tillykke. 
 //
 //
@@ -9,65 +9,65 @@ Nothing
 DETTE FELT KAN IKKE BRUGES
 DETTE FELT KAN IKKE BRUGES
 //Felt 1
-Tårn +250 guld
-Fantastisk du er landet på tårnet og får
+TÃ¥rn +250 guld
+Fantastisk du er landet pÃ¥ tÃ¥rnet og fÃ¥r
 250 guld stort tillykke.
 //Felt 2
 Krater -100 guld
-Du er desværre landet i krateret og din bil er i stykker. Det koster dig
-100 guld at få repareret bilen
+Du er desvÃ¦rre landet i krateret og din bil er i stykker. Det koster dig
+100 guld at fÃ¥ repareret bilen
 //Felt 3
 Paladsporten +100 guld
-Vildt nok. Du er nået hele vejen til paladsets porte og du får
-100 guld. Godt gået makker.
+Vildt nok. Du er nÃ¥et hele vejen til paladsets porte og du fÃ¥r
+100 guld. Godt gÃ¥et makker.
 //Felt 4
-Den kolde ørken -20 guld
-Brrrrrr. Det er skide koldt og du må brænde en af dine dyre bøger for at holde varmen. Den koster
-20 guld at købe igen.
+Den kolde Ã¸rken -20 guld
+Brrrrrr. Det er skide koldt og du mÃ¥ brÃ¥nde en af dine dyre bÃ¸ger for at holde varmen. Det koster
+20 guld at kÃ¸be igen.
 //Felt 5
-Byen med det høje mure +100 guld.
-Du er godt nok sej. Du har formået at bestige de højeste bymure, og har fået
+Byen med de hÃ¸je mure +100 guld.
+Du er godt nok sej. Du har formÃ¥et at bestige de hÃ¸jeste bymure, og har fÃ¥et
 100 guld.
 //Felt 6
 Klosteret 0 guld
-Phew, puha og huuuummmmmmmmmmmmmmm. Du kan slappe lidt af fra det evindelige pengeræs...
+Phew, puha og huuuummmmmmmmmmmmmmm. Du kan slappe lidt af fra det evindelige pengerÃ¦s...
 0 guld
 //Felt 7
 Den sorte hule -70 guld.
-Det er uhyggeligt, og meget mørkt. Du må bruge hele din beholdning af lighter gas for at se noget og holde varmen. Det har kostet dig
+Det er uhyggeligt, og meget mÃ¸rkt. Du mÃ¥ bruge hele din beholdning af lightergas for at se noget og holde varmen. Det har kostet dig
 70 guld
 //Felt 8
 Hytterne i bjergene +60 guld.
-Du er på besøg hos din farmor i bjergene, og hun giver dig
+Du er pÃ¥ besÃ¸g hos din farmor i bjergene, og hun giver dig
 60 guld.
 //Felt 9
-Varulve væggen VarVæggen -80 guld.
-PAS PÅ! Der er varulve overalt. Du har måttet hyre spejdere til at hjælpe dig ved den farlig væg. Du får et ekstra kast pga. af alt hjælpen men det har kostet dig 
+Varulve vÃ¦ggen (VarVÃ¦ggen) -80 guld.
+PAS PÃ¥! Der er varulve overalt. Du har mÃ¥ttet hyre spejdere til at hjÃ¦lpe dig ved den farlig vÃ¦g. Du fÃ¥r et ekstra kast pga. af alt hjÃ¦lpen men det har kostet dig 
 80 guld.
 //Felt 10
 Hullet -80 guld.
-Du er faldet i et kæmpe dybt hul, og du må betale en forbipasserende for hjælpen.. Sådan en grådig rad.
+Du er faldet i et kÃ¦mpe dybt hul, og du mÃ¥ betale en forbipasserende for hjÃ¦lpen.. SÃ¥dan en grÃ¥dig rad.
 80 guld
 //Felt 11
 Guldminen 650 guld
-JACKPOT!!!!! Hvor heldig har man lov at være. Du nærmest faldt over en guldmine med MASSER af guld. Du har tjent
+JACKPOT!!!!! Hvor heldig har man lov at vÃ¦re. Du nÃ¦rmest faldt over en guldmine med MASSER af guld. Du har tjent
 650 guld.
 //Andre spilbeskeder startende med spillernavne
 Spiller 1
 Spiller 2
 //Konto < 0 og tabt spillet
-Du har overskredet din kredit på kontoen, og du har tabt spillet.
+Du har overskredet din kredit pÃ¥ kontoen, og du har tabt spillet.
 //Konto > 3000 og vundet spillet
 Du har vundet spillet med
 //Hej
 Hej
-//Tryk på knappen
-Tryk på knappen for at slå med terningerne
+//Tryk pÃ¥ knappen
+Tryk pÃ¥ knappen for at slÃ¥ med terningerne
 //Guld
 guld
 //Knaptekst
-Slå terningerne
-//Overførslen er gået godt
-Overførslen er gået godt.
-//Overførslen sætter konto i minus
-Overførslen sætter konto i minus, og konto er derfor sat til 0
+SlÃ¥ terningerne
+//OverfÃ¥rslen er gÃ¥et godt
+OverfÃ¸rslen er gÃ¥et godt.
+//OverfÃ¸rslen sÃ¦tter konto i minus
+OverfÃ¸rslen sÃ¦tter konto i minus, og konto er derfor sat til 0
