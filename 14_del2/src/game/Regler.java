@@ -11,13 +11,13 @@ public class Regler {
 
 	}
 
-	public int hentPoint() {
+	public int hentVærdi() {
 		return this.værdi;
 
 	}
 
 
-	public void sætpoint(int point){
+	public void sætVærdi(int point){
 		this.værdi = point;
 
 	}

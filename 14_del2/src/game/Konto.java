@@ -25,20 +25,23 @@ public class Konto {
 		
 		if (this.værdi + værdi < 0) {//Hvis v�rdien af det der st�r p� kontoen - det der bliver lagt til (-) < 0
 			this.værdi = 0;
-			return (spiltekst[9]);
+			return (spiltekst[10]);
 		}else {
 			this.værdi = this.værdi + værdi;
-			return (spiltekst[10]);
+			return (spiltekst[9]);
 		}
 	}
 	
-	public String hæv(int værdi) {
-		if (this.værdi + værdi < 0){
-			this.værdi = 0;
+	public String hæv(int værdi) {//Man skal ikke kunne hæve et minus beløb modsat indsæt hvor man indsætter et minus beløb.??
+		if (værdi < 0) {
 			return (spiltekst[9]);
-		}else {
-			this.værdi = this.værdi + værdi;
+		}
+		if (this.værdi - værdi < 0){
+			this.værdi = 0;
 			return (spiltekst[10]);
+		}else {
+			this.værdi = this.værdi - værdi;
+			return (spiltekst[9]);
 		}
 	}
 	

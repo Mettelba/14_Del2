@@ -70,4 +70,4 @@ Slå terningerne
 //Overfårslen er gået godt
 Overførslen er gået godt.
 //Overførslen sætter konto i minus
-Overførslen sætter konto i minus, og konto er derfor sat til 0
+Overførslen er gået dårligt.

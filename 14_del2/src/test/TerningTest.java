@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class testTerning {
+public class TerningTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

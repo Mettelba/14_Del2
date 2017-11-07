@@ -64,13 +64,13 @@ public class Spil {
 			regler.felt(raflebæger.hentSum());//sæt reglen i regler
 
 			//Hvis spiller får under 0 med aktuelt felts point
-			if (spiller.hentKonto().checkMinus(regler.hentPoint())==true){
+			if (spiller.hentKonto().checkMinus(regler.hentVærdi())==true){
 				this.spiltabt = true;
 				break;
 			}
 
 			//Hvis der ikke er noget problem kan man lige så godt søtte guldet ind på kontoen
-			String resultat = spiller.hentKonto().indsæt(regler.hentPoint()); //tilføj point til spiller konto
+			String resultat = spiller.hentKonto().indsæt(regler.hentVærdi()); //tilføj point til spiller konto
 			GUI.setBalance(spiller.hentNavn(), spiller.hentKonto().hentVærdi()); //set spillebræt balance
 
 			//Hvis spiller har over 3000 guld

@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import game.Raflebæger;
 
-public class testRaflebæger {
+public class RaflebægerTest {
 	
 	Raflebæger raflebæger = new Raflebæger(6);
 	

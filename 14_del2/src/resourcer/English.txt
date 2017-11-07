@@ -70,4 +70,4 @@ Roll the dice
 //Overf�rslen er g�et godt
 The transfer has completed allright
 //Overf�rslen s�tter konto i minus
-The transfer would set your account to negative, and the account is therefore set to 0
+The transfer has not completed allright
