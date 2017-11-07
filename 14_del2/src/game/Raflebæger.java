@@ -44,7 +44,7 @@ public class Raflebæger {
 		return this.sum; //returner sum
 	}
 
-	public void sætSum(int sum) { //parameter man sender til metoden
+	public void sætSum(int sum) { // parameter man sender til metoden 
 		this.sum = sum;
 	}
 	

@@ -61,9 +61,17 @@ public class testRaflebæger {
 			System.out.println("terning2 " + x+"ere = " + statistik1[x]);
 		}
 		
-		
+		int[] statistik2 = new int[13]; //
+		for(int n=1; n<600000; n=n+1) {
+			raflebæger.ryst();
+			int sum2 = raflebæger.hentSum();
+			statistik2[sum2] = statistik2[sum2]+1;
+		}
+		for(int x=2; x<=13; x=x+1) {
+			System.out.println("Sum af terning1 og terning2 " + x+"ere = " + statistik2[x]);
+		}
 	}
-
+	
 	@Test
 	public void testHentTerning1værdi() {
 		raflebæger.sætTerning1værdi(8);;
