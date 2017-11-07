@@ -40,6 +40,13 @@ public class Spiller {
 		return konto.hentVærdi();
 	}
 
+	public void sætKontoVærdi(int værdi) {
+		konto.sætVærdi(værdi);
+	}
+	
+	public void hævKontoVærdi(int værdi) {
+		konto.hæv(værdi);
+	}
 
 
 }

@@ -11,7 +11,7 @@ import game.Konto;
 
 public class KontoTest {
 	
-	Konto konto = new Konto ();
+	Konto konto = new Konto (1000);
 	
 
 	@BeforeClass

@@ -67,31 +67,31 @@ public class SpillerTest {
 		//opsat spiller objekter
 		Spiller player1 = new Spiller("Hans");
 		Spiller player2 = new Spiller("Petra");
-		player1.hentKonto().sætVærdi(1000);
-		player2.hentKonto().sætVærdi(1000);
+		player1.sætKontoVærdi(1000);
+		player2.sætKontoVærdi(1000);
 		
 		//test starter
-		player1.hentKonto().indsæt(-100);
+		player1.modtagGevinst(-100);
 		int expected = 900;
-		int actual = player1.hentKonto().hentVærdi();
+		int actual = player1.indeståendeSpillerKonto();
 		assertEquals("Det virkede ikke at indsætte et minus beløb", expected, actual);
 		
-		player1.hentKonto().sætVærdi(1000);
-		player1.hentKonto().indsæt(100);
+		player1.sætKontoVærdi(1000);
+		player1.modtagGevinst(100);
 		expected = 1100;
-		actual = player1.hentKonto().hentVærdi();
+		actual = player1.indeståendeSpillerKonto();
 		assertEquals("Det virkede ikke at indsætte beløb", expected, actual);
 		
-		player1.hentKonto().sætVærdi(1000);
-		player1.hentKonto().hæv(100);
+		player1.sætKontoVærdi(1000);
+		player1.hævKontoVærdi(100);
 		expected = 900;
-		actual = player1.hentKonto().hentVærdi();
+		actual = player1.indeståendeSpillerKonto();
 		assertEquals("Det virkede ikke at hæve beløb", expected, actual);
 		
-		player1.hentKonto().sætVærdi(1000);
-		player1.hentKonto().hæv(200);
-		player2.hentKonto().hæv(300);
-		assertNotEquals("Kontoerne for de to spillere virker som om den er det samme objekt", player1.hentKonto().hentVærdi(), player2.hentKonto().hentVærdi());	
+		player1.sætKontoVærdi(1000);;
+		player1.hævKontoVærdi(200);
+		player2.hævKontoVærdi(300);
+		assertNotEquals("Kontoerne for de to spillere virker som om den er det samme objekt", player1.indeståendeSpillerKonto(), player2.indeståendeSpillerKonto());	
 
 	}
 }
