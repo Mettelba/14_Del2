@@ -61,6 +61,7 @@ public class testRaflebæger {
 			System.out.println("terning2 " + x+"ere = " + statistik1[x]);
 		}
 		
+		
 	}
 
 	@Test

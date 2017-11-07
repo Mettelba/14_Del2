@@ -62,6 +62,5 @@ public class Raflebæger {
 	}
 	public void sætAntalsider(int antalsider) {
 		this.antalsider = antalsider;
-		
 	}
 }
