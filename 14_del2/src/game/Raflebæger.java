@@ -64,12 +64,6 @@ public class Raflebæger {
 		this.antalsider = antalsider;
 	}
 
-
-
-
-
-
-
 	public String toString(){
 		String returstreng;
 		int sum;
